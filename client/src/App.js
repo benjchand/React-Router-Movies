@@ -16,9 +16,9 @@ export default class App extends Component {
 
   addToSavedList = movie => {
     const savedList = this.state.savedList;
-    const findMovie = savedList.find(el => movie.id === el.id);
+    const findMovie = savedList.find(element => movie.id === element.id);
     if (findMovie) {
-      this.setState({ movieInList: `You've already saved that movie!` });
+      this.setState({ movieInList: `That movie is already saved.` });
       setTimeout(() => this.setState({ movieInList: null }), 2000);
     } else {
       savedList.push(movie);
